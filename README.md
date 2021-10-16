@@ -1,13 +1,15 @@
 # simple-lightbox for Marvelution Docs page
 
-To let any image open in lighbox, simply add ```data-lightbox``` attribute to that image. Example below:
+> You need to include, only the `custom-lightbox.js` file for the lightbox to work.
+
+To let any image open in lighbox, simply add `data-lightbox` attribute to that image. Example below:
 ```html
 <img src="img/lighthouse.svg" alt="Lighthouse - Jenkins for jira" data-lightbox>
 ```
 To conditionally add the lightbox script and styles, add this code at the bottom of your html file. 
 
-Note: In this example the script will always load, since the if block always resolved to true. You can bind that value to something else to control is this 
-light box loads in a page or not.
+**Note:** In this example the `script` will always load, since the `if` block always resolved to `true`. You can bind that value to something else to control is this 
+light box `script` loads in a page or not.
 ```html
 <script>
     (function() {
@@ -18,4 +20,4 @@ light box loads in a page or not.
 </script>
 ```
 
-Thanks all. Thank you.
+That's all. Thank you.
