@@ -1,4 +1,4 @@
-# simple-lightbox for Marvelution Docs page
+# How to use this lightbox
 
 > You need to include, only the `custom-lightbox.js` file for the lightbox to work. [View demo.](https://simple-lightbox.netlify.app/)
 
