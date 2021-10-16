@@ -1,6 +1,6 @@
 # simple-lightbox for Marvelution Docs page
 
-> You need to include, only the `custom-lightbox.js` file for the lightbox to work.
+> You need to include, only the `custom-lightbox.js` file for the lightbox to work. [View demo.](https://simple-lightbox.netlify.app/)
 
 To let any image open in lighbox, simply add `data-lightbox` attribute to that image. Example below:
 ```html
