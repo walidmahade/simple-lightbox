@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       transition: all 0.15s ease-in;
     }
     .lightbox.show {
-      background-color: rgba(0,0,0, 0.95);
+      background-color: rgba(0,0,0, 0.85);
       opacity: 1;
       visibility: visible;
       z-index: 99999;
@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
             '  <path fill-rule="evenodd" d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"/>\n' +
             '</svg></div>';
         $lightbox.innerHTML += '<div class="close-lightbox"></div>' + image.outerHTML;
+        document.querySelector("#lightbox img").removeAttribute('data-lightbox')
         $lightbox.classList.add('show');
       }
     }
