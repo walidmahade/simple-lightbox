@@ -54,13 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
       transform: scale(1.6);
     }
     /* Close lightbox "x" icon */
-    .lightbox .close-lightbox{
+    .lightbox .close-lightbox {
       cursor: pointer;
       position: absolute;
       top: 15px;
       right: 50px;
       width: 20px;
       height: 20px;
+      z-index: 9;
     }
     .lightbox .close-lightbox::after,
     .lightbox .close-lightbox::before{
