@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       align-items: center;
       justify-content: center;
       transition: all 0.15s ease-in;
+      padding: 40px 0;
     }
     .lightbox.show {
       background-color: rgba(0,0,0, 0.85);
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     .lightbox img {
       max-width: 90%;
+      max-height: 90%;
       transform: scale(1);
       transition: transform .3s ease-in-out;
     }
@@ -55,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .lightbox .close-lightbox{
       cursor: pointer;
       position: absolute;
-      top: 30px;
+      top: 15px;
       right: 50px;
       width: 20px;
       height: 20px;
