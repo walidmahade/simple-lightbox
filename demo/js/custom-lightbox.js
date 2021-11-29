@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hide Lightbox event
     $lightbox.addEventListener('click', (e) => {
       if (!e.target.hasAttribute('src')) {
-        $lightbox.classList.remove('show');
-        $lightbox.innerHTML = '';
+        if (!e.target.closest('svg')) {
+          $lightbox.classList.remove('show');
+          $lightbox.innerHTML = '';
+        }
       }
     });
 
@@ -44,9 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
       visibility: visible;
       z-index: 99999;
     }
-    .lightbox img {
+    .lightbox img,
+    .lightbox svg {
       max-width: 90%;
       max-height: 90%;
+      height: auto;
       transform: scale(1);
       transition: transform .3s ease-in-out;
     }
@@ -91,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     .zoom-lightbox svg { pointer-events: none; }
     .zoom-lightbox svg * { fill: #fff; }
+    /* handle svg stylings */
+    [data-lightbox-svg] svg { pointer-events: none; }
     `;
     document.body.appendChild(style);
   }
@@ -104,6 +110,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (image) {
         $lightbox.innerHTML += '<div class="close-lightbox"></div>' + image.outerHTML;
         document.querySelector("#lightbox img").removeAttribute('data-lightbox')
+        $lightbox.classList.add('show');
+      }
+    } else if(e.target.hasAttribute('data-lightbox-svg')) {
+      const svg = e.target.innerHTML;
+      if (svg) {
+        $lightbox.innerHTML += '<div class="close-lightbox"></div>' + svg;
         $lightbox.classList.add('show');
       }
     }
